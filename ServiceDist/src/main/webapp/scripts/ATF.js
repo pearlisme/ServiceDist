@@ -5,9 +5,11 @@
 
 	
 	
-	place = {
-		Davidson:['Antioch', 'Nashville'],
-		Rutherford:['Smyrna', 'LaVergne']
+	args = {
+		IPV4:['1', '2','3'],
+		IPV6:['1', '2'],
+		L3VPN:['1'],
+		BGP:['0', '1'],
 		}
 
 	function clearOpts(target){
@@ -16,13 +18,13 @@
 			sel.remove(i);
 	}
 
-	function configureDropDownLists(o,city) {
-		if(document.info[city].options.length!=0) clearOpts(city);
+	function configureDropDownLists(o,tech2) {
+		if(document.info[tech2].options.length!=0) clearOpts(tech2);
 		selected = o.selectedIndex;
 		if(selected==0) return;
-		city = o.options[selected].value;
-		for (i = 0; i < place[city].length; i++) {
-					createOption('city', place[county.value][i], place[county.value][i]) 
+		tech2 = o.options[selected].value;
+		for (i = 0; i < args[tech2].length; i++) {
+					createOption('tech2', args[tech1.value][i], args[tech1.value][i]) 
 				}
 				
 	}

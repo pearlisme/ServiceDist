@@ -27,7 +27,37 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/Scripts/ATF.js"></script>
+<!-- <script type="text/javascript" src="/scripts/ATF.js"></script> -->
+<script type="text/javascript">
+args = {
+		IPV4:['1', '2','3'],
+		IPV6:['1', '2'],
+		L3VPN:['1'],
+		BGP:['0', '1'],
+		}
+
+	function clearOpts(target){
+		sel = document.info[target].options;
+		for (i = sel.length - 1; i >= 0; i--)
+			sel.remove(i);
+	}
+
+	function configureDropDownLists(o,tech2) {
+		if(document.info[tech2].options.length!=0) clearOpts(tech2);
+		selected = o.selectedIndex;
+		if(selected==0) return;
+	 	tech2 = o.options[selected].value;
+		for (i = 0; i < args[tech2].length; i++) {
+					createOption('tech2', args[tech1.value][i], args[tech1.value][i]) 
+				}
+				
+	}
+
+	function createOption(target, label, value) {
+		opts = document.info[target];
+		opts.options.add(new Option(label,value) );
+	}
+</script>
 </head>
 <body bgcolor="green">
 	<div class="main-content" align="center">
@@ -53,7 +83,7 @@
 				</label>
 			</div>
 			<div class="form-row">
-				<label><span></span></label> <select name="tech2" id="tech2"></select>
+				<label><span>ARGS</span></label> <select name="tech2" id="tech2"></select>
 			</div>
 		</form>
 	</div>
