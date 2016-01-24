@@ -27,11 +27,12 @@
 <!-- Latest compiled JavaScript -->
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Scripts/ATF.js"></script>
 </head>
-<body bgcolor="lightgreen">
-	<div class="main-content">
+<body>
+	<div class="main-content" align="center">
 
-		<!-- You only need this form and the form-basic.css -->
+		
 
 		<form class="form-basic" method="post" action="#">
 
@@ -41,27 +42,16 @@
 
 
 			<div class="form-row">
-				<label> <span>RFS</span> <select name="dropdown">
-						<option>IPV4</option>
-						<option>IPV6</option>
-						<option>L3VPN</option>
-						<option>BGP</option>
+				<label> <span>RFS</span> <select name="county" id="county"
+					onchange="configureDropDownLists(this,'city');">
+						<option value=""></option>
+						<option value="tamilnadu">tamilnadu</option>
+						<option value="andra">andra</option>
 				</select>
 				</label>
 			</div>
+		</form>
+	</div> 
+	</body>
+	</html>
 	
-
-	<div class="form-row">
-		<button type="submit">Submit Form</button>
-	</div>
-
-	</form>
-
-	</div>
-
-
-
-
-
-</body>
-</html>
