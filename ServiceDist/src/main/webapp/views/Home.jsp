@@ -29,29 +29,33 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/Scripts/ATF.js"></script>
 </head>
-<body>
+<body bgcolor="green">
 	<div class="main-content" align="center">
 
-		
+
 
 		<form class="form-basic" method="post" action="#">
 
 			<div class="form-title-row">
 				<h1>Service Discovery</h1>
 			</div>
-
+			<div></div>
 
 			<div class="form-row">
-				<label> <span>RFS</span> <select name="county" id="county"
-					onchange="configureDropDownLists(this,'city');">
+				<label> <span>RFS</span> <select name="tech1" id="tech1"
+					onchange="configureDropDownLists(this,'tech2');">
 						<option value=""></option>
-						<option value="tamilnadu">tamilnadu</option>
-						<option value="andra">andra</option>
+						<option value="IPV4">IPV4</option>
+						<option value="IPV6">IPV6</option>
+						<option value="L3VPN">L3VPN</option>
+						<option value="BGP">BGP</option>
 				</select>
 				</label>
 			</div>
+			<div class="form-row">
+				<label><span></span></label> <select name="tech2" id="tech2"></select>
+			</div>
 		</form>
-	</div> 
-	</body>
-	</html>
-	
+	</div>
+</body>
+</html>
